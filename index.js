@@ -37,7 +37,6 @@ function install (deps, dir, tmpdir) {
               toPull(require('zlib').createGunzip()),
               pull.asyncMap(function (data,  cb) {
                 setImmediate(function () {
-                  console.error(data.length)
                   cb(null, data)
                 })
               }),
@@ -85,6 +84,7 @@ if(!module.parent)
   )(function (err) {
     if(err) throw err
   })
+
 
 
 
